@@ -37,6 +37,7 @@ function divide() {
 function multiply() {
     let sum = num1 * num2
     paragraph.textContent = sum;
+    console.log(hello)
 }
 
 button.forEach(e => {
