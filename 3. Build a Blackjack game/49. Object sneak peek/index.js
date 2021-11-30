@@ -13,6 +13,7 @@ let player = {
 }
 
 
+
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 

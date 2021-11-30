@@ -13,4 +13,6 @@ let messages = [
 // console.log(messages[3])
 
 
-
+for (message in messages) {
+    console.log(messages[message])
+}

@@ -1,5 +1,12 @@
 // 2. Create the player object. Give it two keys, name and chips, and set their values
 let cards = []
+let player = {
+    name: "Kelvin Nunez",
+    chips: 155,
+    sayHello: function() {
+        console.log(player.name)
+    }
+}
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
@@ -8,9 +15,9 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 // 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
-
+const playerEl = document.getElementById('player-el')
 // 4. Render the player's name and chips in playerEl
-
+playerEl.textContent = player.name + ": $" + player.chips;
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
@@ -21,7 +28,7 @@ function getRandomCard() {
         return randomNumber
     }
 }
-
+console.log(player.sayHello())
 function startGame() {
     isAlive = true
     let firstCard = getRandomCard()
