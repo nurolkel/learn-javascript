@@ -7,3 +7,15 @@ const imgs = [
     "images/hip2.jpg",
     "images/hip3.jpg"
 ]
+const container = document.getElementById('container');
+
+const generateImgs = (arr) => {
+    let imgsDom = ""
+    for (i in arr) {
+        let pictures = `<img class="team-img" src="./${arr[i]}" alt="${arr[i]}">`
+        imgsDom += pictures
+    }
+    container.innerHTML = imgsDom
+}
+
+generateImgs(imgs);
