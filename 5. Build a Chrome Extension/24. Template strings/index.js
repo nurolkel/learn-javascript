@@ -13,6 +13,14 @@ function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
     // listItems += "<li><a target='_blank' href='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
+    // add http:// in the href
+    listItems = `
+        <li>
+            <a target="_blank" href="https://${myLeads[i]}/">
+                ${myLeads[i]}
+            </a>
+        </li>
+    `
     }
     ulEl.innerHTML = listItems  
 }

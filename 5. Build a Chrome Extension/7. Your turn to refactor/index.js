@@ -5,5 +5,7 @@ function saveLead() {
     console.log("Button clicked!")
 }
 
+const buttonEl = document.getElementById('input-btn');
 
+buttonEl.addEventListener('click', saveLead)
 

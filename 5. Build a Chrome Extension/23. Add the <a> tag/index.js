@@ -14,7 +14,9 @@ function renderLeads() {
     for (let i = 0; i < myLeads.length; i++) {
         // Wrap the lead in an anchor tag (<a>) inside the <li>
         // Can you make the link open in a new tab?
-        listItems += "<li>" + myLeads[i] + "</li>"
+        const anchorEl =   `<a href=https://${myLeads[i]} target="_blank">${myLeads[i]}</a>`
+
+        listItems += "<li>" + anchorEl + "</li>"
     }
     ulEl.innerHTML = listItems  
 }
